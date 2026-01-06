@@ -1,0 +1,4 @@
+# Git LFS Configuration
+# Track all word list files with LFS to keep repo size minimal
+# Users can clone without pulling actual lists, packages ship with bundled lists
+lists/**/*.txt filter=lfs diff=lfs merge=lfs -text
