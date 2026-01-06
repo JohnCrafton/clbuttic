@@ -1,0 +1,69 @@
+name: Add Word(s)
+description: Request to add word(s) to a word list
+title: "[ADD] "
+labels: ["word-list", "addition"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve clbuttic! Please provide details about the word(s) you'd like to add.
+
+  - type: input
+    id: language
+    attributes:
+      label: Language
+      description: Which language list should this be added to?
+      placeholder: "en, es, fr, de, pt"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: tier
+    attributes:
+      label: Suggested Tier
+      description: Which tier do you think this belongs in?
+      options:
+        - Tier 1 (slurs, hate speech)
+        - Tier 2 (strong profanity)
+        - Tier 3 (crude but mild)
+        - Tier X (contextually problematic)
+        - Unsure
+    validations:
+      required: true
+
+  - type: textarea
+    id: words
+    attributes:
+      label: Word(s) to Add
+      description: List the word(s), one per line
+      placeholder: |
+        word1
+        word2
+    validations:
+      required: true
+
+  - type: textarea
+    id: justification
+    attributes:
+      label: Justification
+      description: Why should this word be added? Include context about usage and harm level.
+      placeholder: "This term is commonly used as..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources (optional)
+      description: Any references supporting the addition (articles, documentation, etc.)
+      placeholder: "https://..."
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have searched existing issues to ensure this hasn't been requested before
+          required: true
+        - label: I understand this word will be publicly visible in the repository
+          required: true

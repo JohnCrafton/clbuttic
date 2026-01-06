@@ -1,0 +1,44 @@
+name: Bug Report
+description: Report an issue with the word lists, documentation, or tooling
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report an issue!
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: What part of the project is affected?
+      options:
+        - Word lists (incorrect data)
+        - Documentation
+        - Import script
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What's wrong?
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should happen instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other information that might help

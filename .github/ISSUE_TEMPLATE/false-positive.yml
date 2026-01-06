@@ -1,0 +1,55 @@
+name: False Positive Report
+description: Report a word that should be in the allowlist
+title: "[FALSE POSITIVE] "
+labels: ["word-list", "false-positive"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Found a word being incorrectly flagged? Help us fix it!
+
+  - type: input
+    id: language
+    attributes:
+      label: Language
+      description: Which language allowlist needs updating?
+      placeholder: "en, es, fr, de, pt"
+    validations:
+      required: true
+
+  - type: input
+    id: word
+    attributes:
+      label: Word Being Blocked
+      description: The legitimate word that's incorrectly flagged
+      placeholder: "classic"
+    validations:
+      required: true
+
+  - type: input
+    id: trigger
+    attributes:
+      label: Triggering Substring
+      description: Which profanity substring is causing the match?
+      placeholder: "ass"
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: How is this word commonly used? Why is it legitimate?
+      placeholder: "This is a common English word meaning..."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have checked that this word is not already in the allowlist
+          required: true
+        - label: This is a real word in common use (not slang or made-up)
+          required: true

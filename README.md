@@ -105,6 +105,12 @@ Priority areas:
 - False positives we've missed
 - Package implementations
 
+## No Money, Please
+
+This project doesn't accept donations, sponsorships, or funding of any kind. It's a give-back to the ecosystem, not a monetization opportunity.
+
+If you find it useful, pay it forward: contribute words, fix false positives, or build something good with it.
+
 ## License
 
 CC-BY-4.0 (Creative Commons Attribution 4.0 International)
